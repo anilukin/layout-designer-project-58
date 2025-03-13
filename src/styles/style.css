@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: 'Neucha';
+  font-family: Neucha;
   src: url('../fonts/Neucha-Regular.ttf') format('truetype');
 }
 
@@ -44,7 +44,7 @@ main > * {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Neucha', sans-serif;
+  font-family: Neucha, sans-serif;
   font-weight: 400;
   line-height: 1.2em;
   margin: 0;
@@ -134,6 +134,7 @@ ul {
   padding: 0;
   margin: 0;
 }
+
 li {
   width: 100%;
 }
@@ -146,6 +147,7 @@ li {
   padding-left: 15px;
   border: none;
   background-color: var(--white);
+  flex-grow: 1;
 }
 
 .form-input-wrapper {
@@ -222,6 +224,10 @@ li {
   margin-top: 0;
 }
 
+li.card p {
+  margin: 0;
+}
+
 .columns-2 p:last-of-type {
   margin-bottom: 0;
 }
@@ -274,10 +280,6 @@ li {
   background-color: var(--main-hover);
 }
 
-.form-input {
-  flex-grow: 1;
-}
-
 .section-header, .section-subheader {
   text-align: center;
 }
@@ -302,9 +304,8 @@ iframe {
 
 ul.card-list {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 20px;
   align-items: stretch;
   list-style: none;
@@ -312,26 +313,17 @@ ul.card-list {
   margin: 0;
 }
 
+.feature-section > * {
+  flex: 1 1 auto;
+}
+
 ul.card-list > * {
   width: 350px;
   box-sizing: border-box;
 }
 
-li.card {
-  padding: 1.5rem;
-  background-color: var(--light);
-  cursor: pointer;
-}
-
-li.card a {
-  text-decoration: none;
-  color: var(--dark);
-}
-
-ul.card-list > li > h2 {
-  font-size: 3.25rem;
-  line-height: 3.9rem;
-  color: var(--white);
+.feature-section h2 {
+  margin-bottom: 30px;
 }
 
 li.card h2 {
@@ -340,14 +332,27 @@ li.card h2 {
   margin-bottom: 40px;
 }
 
+ul.card-list > li > h2 {
+  font-size: 3.25rem;
+  line-height: 3.9rem;
+  color: var(--white);
+}
+
+li.card {
+  padding: 1.5rem;
+  background-color: var(--light);
+  cursor: pointer;
+}
+
 li.card h3 {
   line-height: 2.55rem;
   margin-bottom: 16px;
   color: var(--main);
 }
 
-li.card p {
-  margin: 0;
+li.card a {
+  text-decoration: none;
+  color: var(--dark);
 }
 
 li.card:hover,
@@ -365,20 +370,12 @@ li.card:hover p {
   margin-bottom: 100px;
 }
 
-.feature-section > * {
-  flex: 1 1 auto;
-}
-
-.feature-section h2 {
-  margin-bottom: 30px;
-}
-
 .sub-heading {
   display: block;
   margin-bottom: 0;
   font-size: 1.5rem;
   line-height: 1.8rem;
-  font-family: 'Neucha', sans-serif;
+  font-family: Neucha, sans-serif;
 }
 
 .content-sections li {
@@ -417,13 +414,14 @@ li.card:hover p {
 }
 
 .content-sections li:nth-child(odd) img {
-  box-shadow: 0px 16px 32px 0px #00000026;
+  box-shadow: 0 16px 32px 0 #00000026;
 }
 
 .content-sections li:nth-child(odd) .columns-header {
   background-color: var(--brown);
   color: var(--white);
 }
+
 .content-sections li:nth-child(even) .columns-header {
   background-color: var(--white);
   color: var(--brown);

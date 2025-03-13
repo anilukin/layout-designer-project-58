@@ -1,3 +1,26 @@
 {
-    "makefile.configureOnOpen": false
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "stylelint.config": {
+        "extends": [
+            "stylelint-config-standard-scss"
+        ],
+        "plugins": [
+            "stylelint-scss"
+        ],
+        "rules": {
+            "declaration-empty-line-before": null,
+            "at-rule-no-unknown": null,
+            "scss/no-global-function-names": null,
+            "scss/at-rule-no-unknown": true
+        }
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
