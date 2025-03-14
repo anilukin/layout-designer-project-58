@@ -220,8 +220,7 @@ li.card p {
 
 .columns-header {
   column-span: all;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 100px 0 20px;
   padding: 5px 10px;
   font-family: Open-sans, sans-serif;
   font-size: 0.875rem;
@@ -351,7 +350,6 @@ li.card:hover p {
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  margin-bottom: 100px;
 }
 
 .sub-heading {
@@ -360,6 +358,12 @@ li.card:hover p {
   font-size: 1.5rem;
   line-height: 1.8rem;
   font-family: Neucha, sans-serif;
+}
+
+.feature-section .description {
+  font-family: Neucha, sans-serif;
+  font-size: 2.125rem;
+  line-height: ;
 }
 
 .content-sections li {
@@ -398,7 +402,7 @@ li.card:hover p {
 }
 
 .content-sections li:nth-child(odd) img {
-  box-shadow: 0 16px 32px 0 #00000026;
+  filter: drop-shadow(0 16px 32px rgb(0 0 0 / 15%));
 }
 
 .content-sections li:nth-child(odd) .columns-header {
