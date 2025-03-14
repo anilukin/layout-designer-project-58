@@ -39,13 +39,9 @@ header, section, footer {
 
 header > *,
 footer > *,
-section {
+section > * {
   z-index: 2;
   max-width: 1110px;
-}
-
-main > * {
-  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -123,16 +119,6 @@ label {
   color: var(--white);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  width: 100%;
-}
-
 .form-input {
   width: 100%;
   height: 50px;
@@ -178,23 +164,14 @@ li {
   height: 525px;
 }
 
-.light-section {
+.video-section {
   background-color: var(--white);
 }
 
-.dark-section {
-  position: relative;
-  padding-top: 100px;
+.navigation-section {
+  padding-top: 200px;
   background-color: var(--main-dark);
   color: var(--white);
-}
-
-.light-section,
-.dark-section,
-.content-sections li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .columns-2 {
@@ -363,14 +340,10 @@ li.card:hover p {
 .feature-section .description {
   font-family: Neucha, sans-serif;
   font-size: 2.125rem;
-  line-height: ;
+  line-height: 2.55rem;
 }
 
-.content-sections li {
-  position: relative;
-}
-
-.content-sections li::before {
+.content-section::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -380,37 +353,37 @@ li.card:hover p {
   opacity: 0.1;
 }
 
-.content-sections li:nth-child(odd) {
+.content-section:nth-child(odd) {
   background-color: var(--light);
 }
 
-.content-sections li:nth-child(even) {
+.content-section:nth-child(even) {
   background-color: var(--brown);
   color: var(--white);
 }
 
-.content-sections li:nth-child(even) .feature-section {
+.content-section:nth-child(even) .feature-section {
   flex-direction: row-reverse;
 }
 
-.content-sections li:nth-child(odd) .sub-heading {
+.content-section:nth-child(odd) .sub-heading {
   color: var(--dark-transparent);
 }
 
-.content-sections li:nth-child(even) .sub-heading {
+.content-section:nth-child(even) .sub-heading {
   color: var(--white-transparent);
 }
 
-.content-sections li:nth-child(odd) img {
+.content-section:nth-child(odd) img {
   filter: drop-shadow(0 16px 32px rgb(0 0 0 / 15%));
 }
 
-.content-sections li:nth-child(odd) .columns-header {
+.content-section:nth-child(odd) .columns-header {
   background-color: var(--brown);
   color: var(--white);
 }
 
-.content-sections li:nth-child(even) .columns-header {
+.content-section:nth-child(even) .columns-header {
   background-color: var(--white);
   color: var(--brown);
 }
