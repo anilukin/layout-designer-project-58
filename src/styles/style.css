@@ -184,18 +184,9 @@ li {
 
 .dark-section {
   position: relative;
+  padding-top: 100px;
   background-color: var(--main-dark);
   color: var(--white);
-}
-
-.dark-section::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: var(--main-dark);
 }
 
 .light-section,
@@ -271,15 +262,16 @@ li.card p {
   background-color: var(--main-hover);
 }
 
-.section-header, .section-subheader {
+.section-header {
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .section-subheader {
   display: inline-block;
   width: 100%;
-  margin-top: 27px;
-  margin-bottom: 515px;
+  margin-bottom: 347px;
+  text-align: center;
 }
 
 iframe {
@@ -289,8 +281,9 @@ iframe {
 
 .video {
   position: absolute;
-  top: 329px;
+  bottom: -100px;
   z-index: 2;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
 ul.card-list {
