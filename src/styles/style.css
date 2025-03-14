@@ -312,7 +312,7 @@ ul.card-list > * {
 
 li.card h2 {
   font-size: 4rem;
-  line-height: 70.5px;
+  line-height: 1;
   margin-bottom: 40px;
 }
 
