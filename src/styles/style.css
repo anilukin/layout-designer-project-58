@@ -49,7 +49,6 @@ section,
 
 section > *,
 .content {
-  z-index: 2;
   max-width: 1110px;
 }
 
