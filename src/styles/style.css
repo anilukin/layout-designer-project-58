@@ -83,7 +83,6 @@ header::before {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
-  z-index: 1;
 }
 
 footer a {
@@ -139,7 +138,6 @@ label {
 .header {
   display: block;
   width: 100%;
-  z-index: 1;
   padding-bottom: 185px;
 }
 
@@ -256,20 +254,14 @@ li.card p {
 }
 
 .section-subheader {
-  display: inline-block;
+  display: block;
   width: 100%;
   margin-bottom: 30px;
   text-align: center;
 }
 
-iframe {
-  display: block;
-  margin: 0 auto;
-  border: none;
-}
-
 .video {
-  display: inline-block;
+  display: block;
   position: relative;
   margin-top: -200px;
   top: 200px;
