@@ -25,27 +25,30 @@ body {
   margin: 0;
   font: 16px/1.6em 'Open Sans', sans-serif;
   color: var(--dark);
-  width: 100%;
 }
 
-header, section, footer, .header-content {
+header, section, footer,
+.content {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 100px 0;
+  padding: 0;
 }
 
 header {
-  padding: 0;
   background-color: var(--light);
   overflow: hidden;
 }
 
-header > *,
-footer > *,
-section > * {
+section, 
+.content {
+  width: 100%;
+  padding: 100px 0;
+}
+
+section > *,
+.content {
   z-index: 2;
   max-width: 1110px;
 }
@@ -103,7 +106,6 @@ form {
   width: 100%;
   height: 190px;
   padding: 55px;
-  margin-top: 100px;
   margin-bottom: 60px;
   background-color: var(--main-dark);
   color: var(--white);
@@ -178,10 +180,6 @@ label {
   column-gap: 30px;
 }
 
-.columns-2 p {
-  margin-top: 0;
-}
-
 li.card p {
   margin: 0;
 }
@@ -190,15 +188,19 @@ li.card p {
   break-after: column;
 }
 
+.columns-2 p:last-of-type {
+  margin-bottom: 0;
+}
+
 .columns-header {
   column-span: all;
   margin: 100px 0 20px;
   padding: 5px 10px;
   font-family: Open-sans, sans-serif;
   font-size: 0.875rem;
-  line-height: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .button {
@@ -360,6 +362,10 @@ li.card:hover p {
   opacity: 0.1;
 }
 
+.content-section img {
+  filter: drop-shadow(0 16px 32px rgb(0 0 0 / 15%));
+}
+
 .content-section:nth-child(odd) {
   background-color: var(--light);
 }
@@ -379,10 +385,6 @@ li.card:hover p {
 
 .content-section:nth-child(even) .sub-heading {
   color: var(--white-transparent);
-}
-
-.content-section:nth-child(odd) img {
-  filter: drop-shadow(0 16px 32px rgb(0 0 0 / 15%));
 }
 
 .content-section:nth-child(odd) .columns-header {
