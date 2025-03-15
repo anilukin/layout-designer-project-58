@@ -180,6 +180,10 @@ label {
   column-gap: 30px;
 }
 
+.columns-header ~ p {
+  margin-top: 0;
+}
+
 li.card p {
   margin: 0;
 }
@@ -212,6 +216,7 @@ li.card p {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+  line-height: 160%;
   cursor: pointer;
 }
 
@@ -254,7 +259,7 @@ li.card p {
 .section-subheader {
   display: inline-block;
   width: 100%;
-  margin-bottom: 347px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -265,8 +270,12 @@ iframe {
 }
 
 .video {
-  position: absolute;
-  bottom: -100px;
+  display: inline-block;
+  position: relative;
+  margin-top: -200px;
+  top: 200px;
+  width: 919px;
+  height: 517px;
   z-index: 2;
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
